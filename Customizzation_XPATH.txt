@@ -1,0 +1,35 @@
+
+
+Format of partial or relative xpath:
+
+//*[@attribute = 'value of the attribute']
+
+// --> All preceding parent tags  or succeeding child html tags
+* --> is a regular expression which means any html tag
+/ --> immediate parent tag or immediate child tag
+attribute = inpect element tool givres attribute by ID. We can use any attribute present in HTML script of the element
+@ --> regular expression defining the specific attribute
+** value of the attribute has to be unique
+
+1) //*[@class = 'gLFyf gsfi']  --> compound class values are supported by xpath
+2) //input[@class = 'gLFyf gsfi']
+3) //input[@name = 'q']
+4) //input[@title = 'Search']
+5) //div[@class='a4bIc']/input  or //div[@class='a4bIc']/input[1]
+6) //div[@class = 'SDkEP']/div[2]/input  or //div[@class = 'SDkEP']/div[2]/input[1]
+7) //div[@class = 'RNNXgb']/div/div[2]/input     or      //div[@class = 'RNNXgb']/div[1]/div[2]/input[1]
+//USE THE AND OPERATOR
+8) //div[@jscontroller='cnjECf' and @class = 'A8SBwf']/div/div/div[2]/input
+
+//div[@jscontroller='cnjECf' and @class = 'A8SBwf']/div[1]/div[1]/div[2]/input[1]
+
+//div[@jscontroller='cnjECf' and @class = 'A8SBwf']/div[@class = 'RNNXgb']/div[@class = 'SDkEP']/div[@class = 'a4bIc']/input[@name = 'q']
+
+//USE THE OR OPERATOR
+//div[@jscontroller='cnjECf' or @class = 'A8SBwf']/div/div/div[2]/input
+
+8) //div[@jscontroller = 'HGv0mf']/div[3]/form[1]/div/div[1]/div[1]/div[1]/div[2]/input[1]
+
+Customise the full xpath:
+html/body[1]/div[1]/div[3]/form[1]/div/div[1]/div[1]/div[1]/div[2]/input[1]
+

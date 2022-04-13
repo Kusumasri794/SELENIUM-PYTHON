@@ -1,0 +1,39 @@
+Format of partial or relative xpath:
+
+//*[@attribute = 'value of the attribute']
+
+// --> All preceding parent tags  or succeeding child html tags
+* --> is a regular expression which means any html tag
+/ --> immediate parent tag or immediate child tag
+attribute = inpect element tool givres attribute by ID. We can use any attribute present in HTML script of the element
+@ --> regular expression defining the specific attribute
+** value of the attribute has to be unique
+
+Format of partial or relative cssSelector:
+
+*[attribute = 'value of the attribute']
+
+.  means class
+#  means ID
+immediate parent or immediate child --> greater than or single space
+
+
+1) input.gNO89b    or   *[class = 'gNO89b']   or   input[class = 'gNO89b']
+2) input[value = 'Google Search']
+3) input[name = 'q']
+4) centre>input:nth-child(1)
+5) Compound class value is supported by css Selector
+div[class = 'FPdoLc lJ9FBc']>center:nth-child(1)>input:nth-child(1)
+div[class = 'FPdoLc lJ9FBc'] center:nth-child(1) input:nth-child(1)
+div.FPdoLc lJ9FBc>center:nth-child(1)>input:nth-child(1) - not supported
+div.FPdoLc lJ9FBc center:nth-child(1) input:nth-child(1) - not be supported
+div.FPdoLc>center:nth-child(1)>input:nth-child(1) - using one of the class values from compound structure
+div.FPdoLc center:nth-child(1) input:nth-child(1) - using one of the class values from compound structure
+//AND and OR logic  - removed from reference
+6) div[jscontroller = 'cnjECf'] div:nth-child(5) center:nth-child(1) input:nth-child(1)
+ div[jscontroller = 'cnjECf']>div:nth-child(5)>center:nth-child(1)>input:nth-child(1)
+
+7) div[jscontroller = 'HGv0mf']>div:nth-child(3)>form:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(5)>center:nth-child(1)>input:nth-child(1)
+
+Full or Absolute CssSelector
+8) html>body:nth-child(2)>div:nth-child(2)>div:nth-child(3)>form:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(5)>center:nth-child(1)>input:nth-child(1)
